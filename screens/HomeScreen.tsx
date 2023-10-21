@@ -1,6 +1,7 @@
 import { NativeStackHeaderProps } from '@react-navigation/native-stack'
 import React from 'react'
-import { Button, Text, View, StyleSheet } from 'react-native'
+import { StyleSheet, Text, View } from 'react-native'
+import data from '../data.json'
 
 const HomeScreen = ({ navigation }: NativeStackHeaderProps) => {
 	return (
