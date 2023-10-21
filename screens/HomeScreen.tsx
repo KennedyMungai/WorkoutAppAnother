@@ -6,16 +6,12 @@ import { WorkOut } from '../types/data'
 import WorkoutItem from '../components/WorkoutItem'
 
 const HomeScreen = ({ navigation }: NativeStackHeaderProps) => {
-	const renderStuff = ({ item }: { item: WorkOut }) => (
-		<WorkoutItem item={item} />
-	)
-
 	return (
 		<View style={styles.homeScreenView}>
 			<FlatList
 				data={data as WorkOut[]}
 				keyExtractor={(itemData) => itemData.slug}
-				renderItem={renderStuff}
+				renderItem={WorkoutItem}
 			/>
 		</View>
 	)
