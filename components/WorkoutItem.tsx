@@ -28,6 +28,6 @@ const styles = StyleSheet.create({
 		borderRadius: 5,
 		backgroundColor: '#6E9075',
 		borderColor: '#563635',
-		borderWidth: 2
+		borderWidth: 1
 	}
 })
