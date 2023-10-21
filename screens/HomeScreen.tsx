@@ -3,17 +3,12 @@ import React from 'react'
 import { FlatList, StyleSheet, Text, View } from 'react-native'
 import data from '../data.json'
 import { WorkOut } from '../types/data'
+import WorkoutItem from '../components/WorkoutItem'
 
 const HomeScreen = ({ navigation }: NativeStackHeaderProps) => {
-	const renderStuff = ({ item }: { item: WorkOut }) => {
-		return (
-			<View>
-				<Text>
-					<Text>{item.name}</Text> - <Text>{item.difficulty}</Text>
-				</Text>
-			</View>
-		)
-	}
+	const renderStuff = ({ item }: { item: WorkOut }) => (
+		<WorkoutItem item={item} />
+	)
 
 	return (
 		<View style={styles.homeScreenView}>
