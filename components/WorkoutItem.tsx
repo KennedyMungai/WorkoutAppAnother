@@ -1,11 +1,16 @@
 import { View, Text } from 'react-native'
+import { WorkOut } from '../types/data'
 
-type Props = {}
+type Props = {
+	item: WorkOut
+}
 
-const WorkoutItem = (props: Props) => {
+const WorkoutItem = ({ item }: Props) => {
 	return (
 		<View>
-			<Text>WorkoutItem</Text>
+			<Text>
+				<Text>{item.name}</Text> - <Text>{item.difficulty}</Text>
+			</Text>
 		</View>
 	)
 }
