@@ -1,9 +1,9 @@
 import { NativeStackHeaderProps } from '@react-navigation/native-stack'
 import React from 'react'
-import { FlatList, StyleSheet, Text, View } from 'react-native'
+import { FlatList, StyleSheet, View } from 'react-native'
+import WorkoutItem from '../components/WorkoutItem'
 import data from '../data.json'
 import { WorkOut } from '../types/data'
-import WorkoutItem from '../components/WorkoutItem'
 
 const HomeScreen = ({ navigation }: NativeStackHeaderProps) => {
 	return (
