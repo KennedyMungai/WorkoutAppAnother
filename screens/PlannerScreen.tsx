@@ -1,10 +1,14 @@
 import React from 'react'
-import { View } from 'react-native'
+import { Text, View } from 'react-native'
 
 type Props = {}
 
 const PlannerScreen = (props: Props) => {
-	return <View>PlannerScreen</View>
+	return (
+		<View>
+			<Text>PlannerScreen</Text>
+		</View>
+	)
 }
 
 export default PlannerScreen
