@@ -1,4 +1,4 @@
-import { View, Text } from 'react-native'
+import { View, Text, StyleSheet } from 'react-native'
 import { WorkOut } from '../types/data'
 
 type Props = {
@@ -7,12 +7,23 @@ type Props = {
 
 const WorkoutItem = ({ item }: Props) => {
 	return (
-		<View>
-			<Text>Name: {item.name}</Text>
-			<Text>Duration: {item.duration}</Text>
-			<Text>Difficulty: {item.difficulty}</Text>
+		<View style={styles.workoutItemView}>
+			<Text style={{ color: 'white' }}>Name: {item.name}</Text>
+			<Text style={{ color: 'white' }}>Duration: {item.duration}</Text>
+			<Text style={{ color: 'white' }}>
+				Difficulty: {item.difficulty}
+			</Text>
 		</View>
 	)
 }
 
 export default WorkoutItem
+
+const styles = StyleSheet.create({
+	workoutItemView: {
+		padding: 10,
+		marginVertical: 10,
+		borderRadius: 5,
+		backgroundColor: '#6E9075'
+	}
+})
