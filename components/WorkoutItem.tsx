@@ -8,9 +8,9 @@ type Props = {
 const WorkoutItem = ({ item }: Props) => {
 	return (
 		<View>
-			<Text>
-				<Text>{item.name}</Text> - <Text>{item.difficulty}</Text>
-			</Text>
+			<Text>Name: {item.name}</Text>
+			<Text>Duration: {item.duration}</Text>
+			<Text>Difficulty: {item.difficulty}</Text>
 		</View>
 	)
 }
