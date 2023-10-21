@@ -1,11 +1,11 @@
 import React from 'react'
-import { Alert, Button, Text, View } from 'react-native'
+import { Alert, Button, Text, View, StyleSheet } from 'react-native'
 
 type Props = {}
 
 const HomeScreen = (props: Props) => {
 	return (
-		<View>
+		<View style={styles.homeScreenView}>
 			<Text>HomeScreen</Text>
 			<Button
 				title='Go to Planner'
@@ -16,3 +16,12 @@ const HomeScreen = (props: Props) => {
 }
 
 export default HomeScreen
+
+const styles = StyleSheet.create({
+	homeScreenView: {
+		flex: 1,
+		justifyContent: 'center',
+		alignItems: 'center',
+		gap: 10
+	}
+})
