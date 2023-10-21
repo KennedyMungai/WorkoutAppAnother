@@ -1,15 +1,17 @@
 import React from 'react'
 import { Alert, Button, Text, View, StyleSheet } from 'react-native'
 
-type Props = {}
+type Props = {
+	navigation: any
+}
 
-const HomeScreen = (props: Props) => {
+const HomeScreen = ({ navigation }: Props) => {
 	return (
 		<View style={styles.homeScreenView}>
 			<Text>HomeScreen</Text>
 			<Button
 				title='Go to Planner'
-				onPress={() => Alert.alert('Planner')}
+				onPress={() => navigation.push('Planner')}
 			/>
 		</View>
 	)
