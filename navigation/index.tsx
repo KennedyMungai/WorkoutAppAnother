@@ -1,11 +1,21 @@
 import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import { View } from 'react-native'
+import HomeScreen from '../screens/HomeScreen'
+import PlannerScreen from '../screens/PlannerScreen'
 
 type Props = {}
 
+const Stack = createNativeStackNavigator()
+
 const index = (props: Props) => {
-	return <View>index</View>
+	return (
+		<NavigationContainer>
+			<Stack.Navigator>
+				<Stack.Screen name='Home' component={HomeScreen} />
+				<Stack.Screen name='Planner' component={PlannerScreen} />
+			</Stack.Navigator>
+		</NavigationContainer>
+	)
 }
 
 export default index
