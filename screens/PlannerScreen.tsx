@@ -1,11 +1,8 @@
+import { NativeStackHeaderProps } from '@react-navigation/native-stack'
 import React from 'react'
-import { Button, Text, View, Alert, StyleSheet } from 'react-native'
+import { Button, StyleSheet, Text, View } from 'react-native'
 
-type Props = {
-	navigation: any
-}
-
-const PlannerScreen = ({ navigation }: Props) => {
+const PlannerScreen = ({ navigation }: NativeStackHeaderProps) => {
 	return (
 		<View style={styles.plannerScreenView}>
 			<Text>PlannerScreen</Text>

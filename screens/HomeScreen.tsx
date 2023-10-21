@@ -1,11 +1,8 @@
+import { NativeStackHeaderProps } from '@react-navigation/native-stack'
 import React from 'react'
-import { Alert, Button, Text, View, StyleSheet } from 'react-native'
+import { Button, Text, View, StyleSheet } from 'react-native'
 
-type Props = {
-	navigation: any
-}
-
-const HomeScreen = ({ navigation }: Props) => {
+const HomeScreen = ({ navigation }: NativeStackHeaderProps) => {
 	return (
 		<View style={styles.homeScreenView}>
 			<Text>HomeScreen</Text>
