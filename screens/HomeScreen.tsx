@@ -18,7 +18,7 @@ const HomeScreen = ({ navigation }: NativeStackHeaderProps) => {
 	return (
 		<View style={styles.homeScreenView}>
 			<FlatList
-				data={data}
+				data={data as WorkOut[]}
 				keyExtractor={(itemData) => itemData.slug}
 				renderItem={renderStuff}
 			/>
