@@ -7,7 +7,7 @@ type Props = {}
 
 const Stack = createNativeStackNavigator()
 
-const index = (props: Props) => {
+const Navigation = (props: Props) => {
 	return (
 		<NavigationContainer>
 			<Stack.Navigator initialRouteName='Home'>
@@ -18,4 +18,4 @@ const index = (props: Props) => {
 	)
 }
 
-export default index
+export default Navigation
