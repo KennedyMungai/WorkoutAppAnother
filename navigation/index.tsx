@@ -21,7 +21,7 @@ const Stack = createNativeStackNavigator()
 const RootNavigator = () => {
 	return (
 		<Stack.Navigator>
-			<Stack.Screen name='Root' component={HomeScreen} />
+			<Stack.Screen name='Root' component={BottomTabNavigator} />
 		</Stack.Navigator>
 	)
 }
