@@ -8,7 +8,9 @@ type Props = {
 const WorkoutItem = ({ item }: Props) => {
 	return (
 		<View style={styles.workoutItemView}>
-			<Text style={{ color: 'white' }}>Name: {item.name}</Text>
+			<Text style={{ color: 'white', fontWeight: 'bold' }}>
+				Name: {item.name}
+			</Text>
 			<Text style={{ color: 'white' }}>Duration: {item.duration}</Text>
 			<Text style={{ color: 'white' }}>
 				Difficulty: {item.difficulty}
