@@ -38,12 +38,12 @@ const BottomTabNavigator = () => {
 			<BottomTab.Screen
 				name='Home'
 				component={HomeScreen}
-				options={{ unmountOnBlur: true }}
+				// options={{ unmountOnBlur: true }}
 			/>
 			<BottomTab.Screen
 				name='Planner'
 				component={PlannerScreen}
-				options={{ unmountOnBlur: true }}
+				// options={{ unmountOnBlur: true }}
 			/>
 		</BottomTab.Navigator>
 	)
