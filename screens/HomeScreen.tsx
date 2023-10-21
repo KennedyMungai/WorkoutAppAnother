@@ -11,7 +11,10 @@ const HomeScreen = ({ navigation }: NativeStackHeaderProps) => {
 				keyExtractor={(itemData) => itemData.slug}
 				renderItem={({ item }) => (
 					<View>
-						<Text>{item.name}</Text>
+						<Text>
+							<Text>{item.name}</Text> -{' '}
+							<Text>{item.difficulty}</Text>
+						</Text>
 					</View>
 				)}
 			/>
