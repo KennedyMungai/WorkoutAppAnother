@@ -1,13 +1,20 @@
 import { NativeStackHeaderProps } from '@react-navigation/native-stack'
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { FlatList, StyleSheet, Text, View } from 'react-native'
 import data from '../data.json'
 
 const HomeScreen = ({ navigation }: NativeStackHeaderProps) => {
 	return (
 		<View style={styles.homeScreenView}>
-			<Text>HomeScreen</Text>
-			<Text>{JSON.stringify(data)}</Text>
+			<FlatList
+				data={data}
+				keyExtractor={(itemData) => itemData.slug}
+				renderItem={({ item }) => (
+					<View>
+						<Text>{item.name}</Text>
+					</View>
+				)}
+			/>
 		</View>
 	)
 }
