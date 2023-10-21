@@ -11,7 +11,7 @@ const PlannerScreen = ({ navigation }: Props) => {
 			<Text>PlannerScreen</Text>
 			<Button
 				title='Go to Home'
-				onPress={() => navigation.push('Home')}
+				onPress={() => navigation.navigate('Home')}
 			/>
 		</View>
 	)
