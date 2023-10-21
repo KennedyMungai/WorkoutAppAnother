@@ -20,9 +20,8 @@ const Stack = createNativeStackNavigator()
 
 const RootNavigator = () => {
 	return (
-		<Stack.Navigator initialRouteName='Home'>
-			<Stack.Screen name='Home' component={HomeScreen} />
-			<Stack.Screen name='Planner' component={PlannerScreen} />
+		<Stack.Navigator>
+			<Stack.Screen name='Root' component={HomeScreen} />
 		</Stack.Navigator>
 	)
 }
