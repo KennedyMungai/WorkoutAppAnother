@@ -5,17 +5,23 @@ import PlannerScreen from '../screens/PlannerScreen'
 
 type Props = {}
 
-const Stack = createNativeStackNavigator()
-
 const Navigation = (props: Props) => {
 	return (
 		<NavigationContainer>
-			<Stack.Navigator initialRouteName='Home'>
-				<Stack.Screen name='Home' component={HomeScreen} />
-				<Stack.Screen name='Planner' component={PlannerScreen} />
-			</Stack.Navigator>
+			<RootNavigator />
 		</NavigationContainer>
 	)
 }
 
 export default Navigation
+
+const Stack = createNativeStackNavigator()
+
+const RootNavigator = () => {
+	return (
+		<Stack.Navigator initialRouteName='Home'>
+			<Stack.Screen name='Home' component={HomeScreen} />
+			<Stack.Screen name='Planner' component={PlannerScreen} />
+		</Stack.Navigator>
+	)
+}
