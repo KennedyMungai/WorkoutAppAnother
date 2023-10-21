@@ -7,6 +7,7 @@ const HomeScreen = ({ navigation }: NativeStackHeaderProps) => {
 	return (
 		<View style={styles.homeScreenView}>
 			<Text>HomeScreen</Text>
+			<Text>{JSON.stringify(data)}</Text>
 		</View>
 	)
 }
