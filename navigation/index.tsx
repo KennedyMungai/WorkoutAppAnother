@@ -35,8 +35,16 @@ const BottomTab = createBottomTabNavigator()
 const BottomTabNavigator = () => {
 	return (
 		<BottomTab.Navigator initialRouteName='Home'>
-			<BottomTab.Screen name='Home' component={HomeScreen} />
-			<BottomTab.Screen name='Planner' component={PlannerScreen} />
+			<BottomTab.Screen
+				name='Home'
+				component={HomeScreen}
+				options={{ unmountOnBlur: true }}
+			/>
+			<BottomTab.Screen
+				name='Planner'
+				component={PlannerScreen}
+				options={{ unmountOnBlur: true }}
+			/>
 		</BottomTab.Navigator>
 	)
 }
