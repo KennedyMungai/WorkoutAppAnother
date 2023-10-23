@@ -9,9 +9,9 @@ type DetailParams = {
 	}
 }
 
-const WorkoutDetailScreen = ({
-	route
-}: NativeStackHeaderProps & DetailParams) => {
+type Navigation = NativeStackHeaderProps & DetailParams
+
+const WorkoutDetailScreen = ({ route }: Navigation) => {
 	return (
 		<View style={styles.homeScreenView}>
 			<Text style={styles.homeScreenText}>
