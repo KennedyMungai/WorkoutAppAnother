@@ -2,7 +2,7 @@ import { NativeStackHeaderProps } from '@react-navigation/native-stack'
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 
-const WorkoutDetailScreen = ({ navigation, route }: NativeStackHeaderProps) => {
+const WorkoutDetailScreen = ({ route }: NativeStackHeaderProps) => {
 	return (
 		<View style={styles.homeScreenView}>
 			<Text>Workout Detail</Text>
