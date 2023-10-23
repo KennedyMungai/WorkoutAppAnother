@@ -6,9 +6,14 @@ const useCachedResources = () => {
 
 	useEffect(() => {
 		const loadResourcesAndDataAsync = async () => {
-			setTimeout(() => {
-				setIsLoadingComplete(true)
-			}, 3000)
+			try {
+				Font.loadAsync({
+					montserrat: require('../assets/fonts/Montserrat-Regular'),
+					'montserrat-bold': require('../assets/fonts/Montserrat-Bold')
+				})
+			} catch (error) {
+				console.warn(error)
+			}
 		}
 
 		loadResourcesAndDataAsync()
