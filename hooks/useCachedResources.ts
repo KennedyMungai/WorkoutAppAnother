@@ -2,24 +2,24 @@ import { useEffect, useState } from 'react'
 import * as Font from 'expo-font'
 
 const useCachedResources = () => {
-	const [isLoadingComplete, setIsLoadingComplete] = useState(false)
+    const [isLoadingComplete, setIsLoadingComplete] = useState(false)
 
-	useEffect(() => {
-		const loadResourcesAndDataAsync = async () => {
-			try {
-				Font.loadAsync({
-					montserrat: require('../assets/fonts/Montserrat-Regular'),
-					'montserrat-bold': require('../assets/fonts/Montserrat-Bold')
-				})
-			} catch (error) {
-				console.warn(error)
-			}
-		}
+    useEffect(() => {
+        const loadResourcesAndDataAsync = async () => {
+            try {
+                await Font.loadAsync({
+                    'montserrat': require('../assets/fonts/Montserrat-Regular'),
+                    'montserrat-bold': require('../assets/fonts/Montserrat-Bold')
+                })
+            } catch (error) {
+                console.warn(error)
+            }
+        }
 
-		loadResourcesAndDataAsync()
-	}, [])
+        loadResourcesAndDataAsync()
+    }, [])
 
-	return isLoadingComplete
+    return isLoadingComplete
 }
 
 export default useCachedResources
