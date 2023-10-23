@@ -12,6 +12,8 @@ const useCachedResources = () => {
 
 		loadResourcesAndDataAsync()
 	}, [isLoadingComplete])
+
+	return isLoadingComplete
 }
 
 export default useCachedResources
