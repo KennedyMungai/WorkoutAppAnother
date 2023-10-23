@@ -5,6 +5,8 @@ import useCachedResources from './hooks/useCachedResources'
 export default function App() {
 	const isLoaded = useCachedResources()
 
+	console.log(isLoaded)
+
 	return (
 		<>
 			<Navigation />
