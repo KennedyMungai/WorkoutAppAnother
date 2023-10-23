@@ -13,7 +13,7 @@ const WorkoutItem = ({ item }: Props) => {
 				Name: {item.name}
 			</Text>
 			<Text style={{ color: 'white' }}>
-				Duration: {secToMin(item.duration)}
+				Duration: {secToMin(item.duration)} min
 			</Text>
 			<Text style={{ color: 'white' }}>
 				Difficulty: {item.difficulty}
