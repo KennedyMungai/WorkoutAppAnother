@@ -14,9 +14,7 @@ const HomeScreen = ({ navigation }: NativeStackHeaderProps) => {
 				renderItem={({ item }) => {
 					return (
 						<Pressable
-							onPress={() =>
-								Alert.alert(`I am pressed - ${item.name}`)
-							}
+							onPress={() => navigation.navigate('WorkoutDetail')}
 						>
 							<WorkoutItem item={item} />
 						</Pressable>
