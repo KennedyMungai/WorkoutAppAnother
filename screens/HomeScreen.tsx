@@ -4,7 +4,7 @@ import { Alert, FlatList, Pressable, StyleSheet, View } from 'react-native'
 import WorkoutItem from '../components/WorkoutItem'
 import data from '../data.json'
 import { WorkOut } from '../types/data'
-import { storeData } from '../storage'
+import { getData, storeData } from '../storage'
 
 const HomeScreen = ({ navigation }: NativeStackHeaderProps) => {
 	useEffect(() => {
@@ -15,10 +15,18 @@ const HomeScreen = ({ navigation }: NativeStackHeaderProps) => {
 		dataStorage()
 	}, [])
 
+	const getWorkoutData = async () => {
+		const workoutData = await getData('workout-data')
+
+		return workoutData as WorkOut[]
+	}
+
+	const workoutData = JSON.parse(getWorkoutData())
+
 	return (
 		<View style={styles.homeScreenView}>
 			<FlatList
-				data={data as WorkOut[]}
+				data={workoutData}
 				keyExtractor={(itemData) => itemData.slug}
 				renderItem={({ item }) => {
 					return (
