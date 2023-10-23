@@ -1,6 +1,6 @@
 import { View, Text, StyleSheet } from 'react-native'
 import { WorkOut } from '../types/data'
-import { secToMin } from '../utils/time'
+import { formatSec, secToMin } from '../utils/time'
 
 type Props = {
 	item: WorkOut
@@ -13,7 +13,7 @@ const WorkoutItem = ({ item }: Props) => {
 				Name: {item.name}
 			</Text>
 			<Text style={{ color: 'white' }}>
-				Duration: {secToMin(item.duration)} min
+				Duration: {formatSec(item.duration)} min
 			</Text>
 			<Text style={{ color: 'white' }}>
 				Difficulty: {item.difficulty}
