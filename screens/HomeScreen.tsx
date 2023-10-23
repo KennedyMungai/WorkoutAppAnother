@@ -1,6 +1,6 @@
 import { NativeStackHeaderProps } from '@react-navigation/native-stack'
 import React from 'react'
-import { FlatList, StyleSheet, View } from 'react-native'
+import { Alert, FlatList, Pressable, StyleSheet, View } from 'react-native'
 import WorkoutItem from '../components/WorkoutItem'
 import data from '../data.json'
 import { WorkOut } from '../types/data'
@@ -11,7 +11,17 @@ const HomeScreen = ({ navigation }: NativeStackHeaderProps) => {
 			<FlatList
 				data={data as WorkOut[]}
 				keyExtractor={(itemData) => itemData.slug}
-				renderItem={WorkoutItem}
+				renderItem={({ item }) => {
+					return (
+						<Pressable
+							onPress={() =>
+								Alert.alert(`I am pressed - ${item.name}`)
+							}
+						>
+							<WorkoutItem item={item} />
+						</Pressable>
+					)
+				}}
 			/>
 		</View>
 	)
