@@ -1,12 +1,21 @@
 import { NativeStackHeaderProps } from '@react-navigation/native-stack'
-import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 
-const WorkoutDetailScreen = ({ route }: NativeStackHeaderProps) => {
+type DetailParams = {
+	route: {
+		params: {
+			slug: string
+		}
+	}
+}
+
+const WorkoutDetailScreen = ({
+	route
+}: NativeStackHeaderProps & DetailParams) => {
 	return (
 		<View style={styles.homeScreenView}>
 			<Text style={styles.homeScreenText}>
-				Slug - {(route.params as any).slug}
+				Slug - {route.params.slug}
 			</Text>
 		</View>
 	)
