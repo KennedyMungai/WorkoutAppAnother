@@ -1,6 +1,6 @@
-import { View, Text, StyleSheet } from 'react-native'
+import { StyleSheet, Text, View } from 'react-native'
 import { WorkOut } from '../types/data'
-import { formatSec, secToMin } from '../utils/time'
+import { formatSec } from '../utils/time'
 
 type Props = {
 	item: WorkOut
