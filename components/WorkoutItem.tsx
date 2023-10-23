@@ -13,7 +13,7 @@ const WorkoutItem = ({ item }: Props) => {
 				Name: {item.name}
 			</Text>
 			<Text style={{ color: 'white' }}>
-				Duration: {formatSec(item.duration)} min
+				Duration: {formatSec(item.duration)}
 			</Text>
 			<Text style={{ color: 'white' }}>
 				Difficulty: {item.difficulty}
