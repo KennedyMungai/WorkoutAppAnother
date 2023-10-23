@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import * as Font from 'expo-font'
 
 const useCachedResources = () => {
 	const [isLoadingComplete, setIsLoadingComplete] = useState(false)
