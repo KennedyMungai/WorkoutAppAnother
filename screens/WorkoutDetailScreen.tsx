@@ -5,7 +5,7 @@ import { StyleSheet, Text, View } from 'react-native'
 const WorkoutDetailScreen = ({ route }: NativeStackHeaderProps) => {
 	return (
 		<View style={styles.homeScreenView}>
-			<Text>Workout Detail</Text>
+			<Text>Slug - {route.params.slug}</Text>
 		</View>
 	)
 }
