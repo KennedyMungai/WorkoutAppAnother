@@ -5,7 +5,9 @@ import { StyleSheet, Text, View } from 'react-native'
 const WorkoutDetailScreen = ({ route }: NativeStackHeaderProps) => {
 	return (
 		<View style={styles.homeScreenView}>
-			<Text>Slug - {(route.params as any).slug}</Text>
+			<Text style={styles.homeScreenText}>
+				Slug - {(route.params as any).slug}
+			</Text>
 		</View>
 	)
 }
@@ -20,5 +22,10 @@ const styles = StyleSheet.create({
 		gap: 10,
 		padding: 20,
 		backgroundColor: '#5B6057'
+	},
+	homeScreenText: {
+		color: 'white',
+		fontSize: 20,
+		fontWeight: 'bold'
 	}
 })
