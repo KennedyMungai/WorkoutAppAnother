@@ -1,11 +1,20 @@
 import { NativeStackHeaderProps } from '@react-navigation/native-stack'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Alert, FlatList, Pressable, StyleSheet, View } from 'react-native'
 import WorkoutItem from '../components/WorkoutItem'
 import data from '../data.json'
 import { WorkOut } from '../types/data'
+import { storeData } from '../storage'
 
 const HomeScreen = ({ navigation }: NativeStackHeaderProps) => {
+	useEffect(() => {
+		const dataStorage = async () => {
+			await storeData('workout-data', data)
+		}
+
+		dataStorage()
+	}, [])
+
 	return (
 		<View style={styles.homeScreenView}>
 			<FlatList
