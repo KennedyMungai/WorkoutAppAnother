@@ -4,6 +4,7 @@ import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import HomeScreen from '../screens/HomeScreen'
 import PlannerScreen from '../screens/PlannerScreen'
+import WorkoutDetailScreen from '../screens/WorkoutDetailScreen'
 
 type Props = {}
 
@@ -26,6 +27,11 @@ const RootNavigator = () => {
 				name='Root'
 				component={BottomTabNavigator}
 				options={{ headerShown: false }}
+			/>
+			<Stack.Screen
+				name='WorkoutDetails'
+				component={WorkoutDetailScreen}
+				options={{ headerShown: false, animation: 'slide_from_bottom' }}
 			/>
 		</Stack.Navigator>
 	)
